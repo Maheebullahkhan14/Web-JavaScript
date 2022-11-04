@@ -1,0 +1,10 @@
+ul li{
+    display: block;
+    background-color: aqua;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.li button{
+    background-color: brown;
+}

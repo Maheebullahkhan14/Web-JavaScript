@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="text" id="input">
+    <ul id="list">
+        
+        <li>HTML<span><button>Edit</button></span></li>
+        <li>HTML<span><button>Edit</button></span></li>
+        <li>HTML<span><button>Edit</button></span></li>
+        
+    
+    </ul>
+    <button onclick="Add()">Add</button>
+    <button onclick="Del()">Del</button>
+</body>
+<script>
+    function Add(){
+    const inputEl = document.getElementById('input')
+    const list  = document.getElementById('list')
+    const li = document.createElement('li')
+    if(inputEl.value === ''){
+        alert('plz enter data')
+        return
+    }else{
+    const text = document.createTextNode(inputEl.value)
+    const btn = document.createElement('button')
+        btn.innerText = 'Edit'
+        
+    li.append(text)
+    li.append(btn)
+    list.append(li)
+ 
+    }
+    }
+
+    function Del(){
+        const ul = document.getElementById('list')
+        ul.removeChild(ul.lastElementChild)
+    }
+
+    function myfunction(){
+        var items = document.querySelectorAll('#li li')
+
+        for(var i = 0 ; i < items.length ; i++){
+            console.log(i)
+        }
+    }
+    myfunction()
+    
+</script>
+</html>
