@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.head{
+    background-color: rgb(221, 212, 179);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    padding: 5px 40px;
+    cursor: pointer;
+}
+
+#sideNav{
+    background-color: rgb(4, 59, 92);;
+    display: flex;
+    position: fixed;
+    z-index: 1px;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    width: 0px;
+    height: 100vh;
+    overflow-x: hidden;
+    padding-top: 50px;
+    transition: all 0.4s ease-in;
+}
+#sideNav a{
+    padding: 40px 0px 40px 40px;
+    text-decoration: none;
+    color:rgb(221, 212, 179);
+    ;
+}
+#sideNav a:hover{
+    color: rgba(255,255,255,0.6);
+}
+#sideNav i{
+    margin-right: 25px;
+}
+.CloseBtn{
+    position: absolute;
+    right: 20px;
+    top: 0px;
+    margin-top: 0px;
+    font-size: 35px!important;
+    margin-right: 20px;
+}
