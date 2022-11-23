@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    list-style: none;
+    background-image: url('img2.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+.navbar{
+    padding-top: 25px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.navbar .logo{
+    margin-left: 70px;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+
+}
+.navbar .nav ul{
+    display: flex;
+}
+
+.navbar .nav ul li{
+    display: flex;
+    margin-right: 45px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-family: 'Antic Slab', serif;
+    color: rgb(128, 97, 97);
+    cursor: pointer;
+}
+.navbar .nav ul li.active{
+    color: rgb(240, 233, 239);
+}
+.navbar .hamburger{
+    display: none;
+    position: absolute;
+    right: 25px;
+    top:25px;
+}
+
+@media only screen and (max-width:700px){
+    /* .navbar .nav ul{
+        display: none;
+    } */
+    .navbar{
+        overflow: hidden;
+        text-align: center;
+    }
+    .navbar .hamburger{
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        transform: scale(1.2);
+
+    }
+    .nav{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.151);
+        overflow: hidden;
+        backdrop-filter: blur(5px);
+        margin-left: -100%;
+        text-align: center;
+        transition: all 0.5s ease-in;
+    }
+    .nav.mobile-menu{
+        margin-left: 0px;
+    }
+
+    .nav ul{
+        display: flex;
+        margin: 0 auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav ul li{
+        margin:25px;
+        text-align: center;
+        cursor: pointer;
+        
+    }
+    .navbar .nav ul li{
+        color: white;
+    }
+
+    .navbar i.active{
+       color: dimgray;
+    }
+    .navbar .nav ul li.active{
+        color: rgb(17, 15, 17);
+        font-weight: 800;
+    }
+    
+}
